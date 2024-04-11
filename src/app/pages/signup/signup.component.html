@@ -1,0 +1,52 @@
+<app-default-login-component 
+    title="Sign in and start today!"
+    primaryBtnText="Register Now"
+    secundaryBtnText="Login Now"
+    (submit)="submit()"
+    (navigate)="navigate()"
+    [disablePrimaryBtn]="!signupForm.valid"
+>
+    <form [formGroup]="signupForm">
+
+        <app-primary-input
+        formControlName="name"
+        inputName="name"
+        type="text"
+        label="Nome"
+        placeHolder="Seu nome"
+        >
+            <img src="/assets/svg/email.svg">
+        </app-primary-input>
+
+        <app-primary-input
+            formControlName="email"
+            inputName="email"
+            type="email"
+            label="Email"
+            placeHolder="email@email.com"
+        >
+            <img src="/assets/svg/email.svg">
+        </app-primary-input>
+
+        <app-primary-input
+            formControlName="password"
+            inputName="password"
+            type="password"
+            label="Senha"
+            placeHolder="Sua senha"
+        >
+            <img src="/assets/svg/password.svg">
+        </app-primary-input>
+
+        <app-primary-input
+        formControlName="passwordConfirm"
+        inputName="passwordConfirm"
+        type="password"
+        label="Repita a senha"
+        placeHolder="Sua senha"
+        >
+            <img src="/assets/svg/password.svg">
+        </app-primary-input>
+    </form>
+</app-default-login-component>
+
