@@ -35,11 +35,17 @@ export class SignupComponent {
   }
 
   submit(){
-    this.loginService.login(this.signupForm.value.email,this.signupForm.value.password).subscribe({
-      next:() => this.toastService.success("Login feito com sucesso"),
-      error:(err) => this.toastService.error("Erro inesperado tente novamente mais"),
-      
-    })
+    if(this.signupForm.value.password != this.signupForm.value.passwordConfirm){
+      this.toastService.warning("As senhas não são iguais")
+      return
+    }
+
+      this.loginService.login(this.signupForm.value.email,this.signupForm.value.password).subscribe({
+        next:() => this.toastService.success("registro feito com sucesso feito com sucesso"),
+        error:(err) => this.toastService.error("Erro inesperado tente novamente mais"),
+        
+      })
+    
     
   }
 
