@@ -44,7 +44,7 @@ main{
             
             .divider{
                 font-size: 14px;
-                color: $gray-bg;
+                color: #b1b1b1;
                 font-weight: 400;
                 text-transform: uppercase;
                
@@ -57,7 +57,7 @@ main{
                 div{
                     flex-grow: 1;
                     height: 2px;
-                    background: $gray-bg;
+                    background: #b1b1b1;
                     min-width: 50px;
                 }
             }
@@ -81,6 +81,10 @@ main{
                     border: 1px solid $primary-color;
                     color: $primary-color;
                     
+                }
+
+                &:disabled{
+                    opacity: 0.8;
                 }
             }
         }
