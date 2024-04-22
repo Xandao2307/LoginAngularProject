@@ -19,15 +19,15 @@ namespace LoginPage.API.Controllers
             _registerCase = registerCase;
         }
 
-        [HttpGet("login")]
-        public ResponseLogin Login([FromBody] RequestLogin request)
+        [HttpGet]
+        public ResponseLogin Login( [FromQuery] string email, [FromQuery] string password )
         {
-            var obj = _loginCase.Execute(request);
+            var obj = _loginCase.Execute(new RequestLogin(email,password));
 
             return obj;
         }
 
-        [HttpPost("Register")]
+        [HttpPost]
         public ResponseRegister Register([FromBody] RequestRegister request)
         {
             var obj = _registerCase.Execute(request);
