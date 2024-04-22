@@ -14,4 +14,10 @@
     <Folder Include="Services\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\LoginPage.Application\LoginPage.Application.csproj" />
+    <ProjectReference Include="..\LoginPage.Communication\LoginPage.Communication.csproj" />
+    <ProjectReference Include="..\LoginPage.Infrastructure\LoginPage.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>
